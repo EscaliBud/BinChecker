@@ -1,7 +1,4 @@
 ## BIN Checker Bot
-
-Test Bot: [Bin Checker Bot](https://t.me/phpBinBot)
-
 ## Env
 
 - `API_TOKEN` Bot token.
