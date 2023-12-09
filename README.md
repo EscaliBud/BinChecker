@@ -1,6 +1,4 @@
-## BIN Checker Bot
-## Env
-
+## ENV
 - `API_TOKEN` Bot token.
 - `START_MSG` Custom start message.
 
