@@ -9,7 +9,7 @@
     $id = $update["message"]["from"]["id"];
     $username = $update["message"]["from"]["username"];
     $firstname = $update["message"]["from"]["first_name"];
-    $start_msg = $_ENV['Your Start message goes here']; 
+    $start_msg = $_ENV['START_MSG]; 
 
 //property of Infinity Hackers Kenya t.me/InfinityHackersKE 
 
@@ -68,7 +68,7 @@ else {
 }
     function send_message($chat_id,$message_id, $message){
         $text = urlencode($message);
-        $apiToken = $_ENV['YOUR TELEGRAM BOT TOKEN GOES HERE'];  
+        $apiToken = $_ENV['BOT_TOKEN'];  
 
 //Codes by EscaliBud t.me/EscaliBud 
         file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=$chat_id&reply_to_message_id=$message_id&text=$text&parse_mode=Markdown");
