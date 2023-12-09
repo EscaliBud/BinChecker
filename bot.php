@@ -1,5 +1,5 @@
 <?php
-    date_default_timezone_set("Asia/Jakarta");
+    date_default_timezone_set("Kenya/Nairobi");
     //Data From Webhook
     $content = file_get_contents("php://input");
     $update = json_decode($content, true);
@@ -9,10 +9,12 @@
     $id = $update["message"]["from"]["id"];
     $username = $update["message"]["from"]["username"];
     $firstname = $update["message"]["from"]["first_name"];
-    $start_msg = $_ENV['START_MSG']; 
+    $start_msg = $_ENV['Your Start message goes here']; 
+
+//property of Infinity Hackers Kenya t.me/InfinityHackersKE 
 
 if($message == "/start"){
-    send_message($chat_id,$message_id, "***Hi $firstname \nUse !bin xxxxxx to Check BIN \n$start_msg***");
+    send_message($chat_id,$message_id, "***Hi $firstname \nUse !bin xxxxxx to Check BIN. Bot by @EscaliBud \n$start_msg***");
 }
 
 //Bin Lookup
@@ -36,6 +38,8 @@ if(strpos($message, "!bin") === 0){
     "user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
    ],
    ]);
+
+//codes by @Escalibud
 
  $result = curl_exec($curl);
  curl_close($curl);
@@ -64,7 +68,9 @@ else {
 }
     function send_message($chat_id,$message_id, $message){
         $text = urlencode($message);
-        $apiToken = $_ENV['API_TOKEN'];  
+        $apiToken = $_ENV['YOUR TELEGRAM BOT TOKEN GOES HERE'];  
+
+//Codes by EscaliBud t.me/EscaliBud 
         file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=$chat_id&reply_to_message_id=$message_id&text=$text&parse_mode=Markdown");
     }
 ?>
