@@ -8,8 +8,8 @@
         "Bot"
     ],
     "website": "https://www.cyberindonesia001.xyz",
-    "repository": "https://github.com/zYxDevs/BinCheckerBot",
-    "success_url": "https://t.me/SpreadNetworks",
+    "repository": "https://github.com/EscaliBud/BinChecker",
+    "success_url": "https://t.me/InfinityHackersKE",
     "env": {
         "API_TOKEN": {
             "description": "API Token , get it from @BotFather"
@@ -21,7 +21,7 @@
     "formation": {
         "web": {
             "quantity": 1,
-            "size": "free"
+            "size": "basic"
         }
     },
     "image": "heroku/php"
